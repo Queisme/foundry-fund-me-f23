@@ -18,10 +18,12 @@ import {FundMe} from "../src/FundMe.sol";
 
 contract FundMeTest is Test {
     FundMe fundMe;
-
+    // set up runs first - always
     function setUp() external {
         fundMe = new FundMe();
     }
+
+    //function testDemo() public {}
 
     function testMinimumDollarIsFive() public {
         assertEq(fundMe.MINIMUM_USD(), 5e18);
